@@ -1,0 +1,198 @@
+:root {
+    --primary: #000000;
+    --secondary: #1a1a1a;
+    --accent: #ffffff;
+    --bg: #ffffff;
+    --text: #000000;
+    --text-light: #666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: var(--bg);
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-light);
+}
+
+.hero {
+    background: var(--primary);
+    color: white;
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.exhibitions {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.exhibitions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.exhibition-card {
+    background: var(--bg);
+}
+
+.exhibition-image {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.exhibition-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.exhibition-card:hover .exhibition-image img {
+    transform: scale(1.05);
+}
+
+.exhibition-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.exhibition-artist {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.exhibition-dates {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    opacity: 0.7;
+}
+
+@media (max-width: 968px) {
+    .exhibitions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/* Poison samples gallery */
+.poison-gallery{margin:3rem 0}
+.poison-gallery .poison-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.poison-gallery figure{margin:0;padding:0}
+.poison-gallery img{width:100%;height:auto;display:block;border-radius:12px}
+.poison-gallery figcaption{margin-top:.6rem;line-height:1.5;opacity:.95}
+.poison-gallery .poison-meta{font-size:.9rem;opacity:.8}
